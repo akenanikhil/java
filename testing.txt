@@ -1,0 +1,42 @@
+Quiz 1 - HTML 5 & CSS3
+Quiz 2 - Java Script
+Quiz 1 - Database concepts
+Quiz 2 - ANSI SQL
+Quiz 1 - Java Operator, Control flow statement
+Quiz 2 - Applying Object Oriented Concepts in java
+Quiz 3 - Collections Framework
+Quiz 4 - Advanced Java Concepts
+
+Let us create a maven project or open an existing maven project and analyse the code quality using sonarqube
+we need to add some plugins to our pom.xml
+
+from Jagadeeswaran Rangappan to everyone:    4:16 PM
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.1</version>
+            </plugin>
+        </plugins>
+    </build>
+these plugins are added to the pom.xml now.
+1) right click project 
+    run as
+        maven build
+    goals:
+        clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2) in sonarqube portal     (localhost:9000)
+    create a project and generate the token     (choose maven and copy the goals, make it single line remove \)
+    build the project with the goals
+3) Now you can see the project in sonarqube
+
+mvn sonar:sonar \
+  -Dsonar.projectKey=mock-demo-2 \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=0f4bb
