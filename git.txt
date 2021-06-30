@@ -1,0 +1,26 @@
+echo "# teja" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/akenanikhil/teja.git
+git push -u origin main
+
+
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M nikhil
+git remote add origin https://github.com/jagasia/rajesh.git
+git push -u origin nikhil
+
+git init
+git remote add origin https://github.com/jagasia/rajesh.git
+git pull origin nikhil
+
+
+
+git init
+git remote add origin https://github.com/jagasia/rajesh.git
+git pull origin swagitti
